@@ -1,6 +1,6 @@
 %define	name	rpm-get 
 %define	version	1.5
-%define	release	1mdk 
+%define	release	%mkrel 1 
 
 Summary:	Simple clone of apt-get for rpm
 Name:		%{name}
