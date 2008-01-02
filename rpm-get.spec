@@ -10,6 +10,7 @@ License:	GPL
 Group:		System/Configuration/Packaging
 URL:		http://zoy.org/~alien/rpm-get
 Source0:	http://zoy.org/~alien/rpm-get/%{name}-%{version}.tar.bz2
+BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 BuildArch:	noarch
 
 %description
