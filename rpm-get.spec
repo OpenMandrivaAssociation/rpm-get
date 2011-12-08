@@ -27,12 +27,12 @@ rm -rf $RPM_BUILD_ROOT
 mkdir -p $RPM_BUILD_ROOT/var/rpm-get
 
 install -D -m755 %_builddir/%{name}/rpm-get-configure $RPM_BUILD_ROOT/sbin/rpm-get-configure
-install -D -m755 $RPM_BUILD_DIR/rpm-get/rpm-get $RPM_BUILD_ROOT/sbin/rpm-get
-install -D -m755 $RPM_BUILD_DIR/rpm-get/dep-check.sh $RPM_BUILD_ROOT/sbin/dep-check.sh
-install -D -m755 $RPM_BUILD_DIR/rpm-get/rpm-dep.sh $RPM_BUILD_ROOT/sbin/rpm-dep.sh
-install -D -m755 $RPM_BUILD_DIR/rpm-get/rpm-fle2pkg.sh $RPM_BUILD_ROOT/sbin/rpm-fle2pkg.sh
-install -D -m644 $RPM_BUILD_DIR/rpm-get/rpm-get.conf $RPM_BUILD_ROOT%{_sysconfdir}/rpm-get.conf
-install -D -m644 $RPM_BUILD_DIR/rpm-get/rpm-get.1 $RPM_BUILD_ROOT%{_mandir}/man1/rpm-get.1
+install -D -m755 %{_builddir}/rpm-get/rpm-get $RPM_BUILD_ROOT/sbin/rpm-get
+install -D -m755 %{_builddir}/rpm-get/dep-check.sh $RPM_BUILD_ROOT/sbin/dep-check.sh
+install -D -m755 %{_builddir}/rpm-get/rpm-dep.sh $RPM_BUILD_ROOT/sbin/rpm-dep.sh
+install -D -m755 %{_builddir}/rpm-get/rpm-fle2pkg.sh $RPM_BUILD_ROOT/sbin/rpm-fle2pkg.sh
+install -D -m644 %{_builddir}/rpm-get/rpm-get.conf $RPM_BUILD_ROOT%{_sysconfdir}/rpm-get.conf
+install -D -m644 %{_builddir}/rpm-get/rpm-get.1 $RPM_BUILD_ROOT%{_mandir}/man1/rpm-get.1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
