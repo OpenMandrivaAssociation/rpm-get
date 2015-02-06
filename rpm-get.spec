@@ -1,6 +1,6 @@
 %define	name	rpm-get 
 %define	version	1.5
-%define	release	%mkrel 6
+%define release	7
 
 Summary:	Simple clone of apt-get for rpm
 Name:		%{name}
